@@ -1,0 +1,1 @@
+{"index.js":"function frankenSplice(arr1, arr2, n) {\n  let array1 = [...arr1];\n  let array2 = [...arr2];\n\narray2.splice(n, 0, ...array1);\n\nreturn array2;\n}\n\nfrankenSplice([1, 2, 3], [4, 5, 6], 1);"}

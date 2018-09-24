@@ -1,0 +1,1 @@
+{"index.js":"function titleCase(str) {\n  let arr = str.toLowerCase().split(\" \");\n  let caps = arr.map(function(word) {\n    return word.replace(word.charAt(0), word.charAt(0).toUpperCase());\n  });\n  \n\n    \n     return caps.join(\" \");\n\n\n}\n\ntitleCase(\"I'm a little tea pot\");"}

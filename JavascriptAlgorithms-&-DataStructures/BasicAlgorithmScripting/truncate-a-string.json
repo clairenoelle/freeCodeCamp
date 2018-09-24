@@ -1,0 +1,1 @@
+{"index.js":"function truncateString(str, num) {\n\n  return str.length <= num ? str : str.substr(0, num) + \"...\";\n\n}\n\ntruncateString(\"A-tisket a-tasket A green and yellow basket\", 8);\n\n"}

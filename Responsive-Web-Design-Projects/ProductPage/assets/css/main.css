@@ -1,0 +1,499 @@
+/* --------------- Normalize CSS --------------- */
+
+html {
+    line-height: 1.15;
+    /* 1 */
+
+    -webkit-text-size-adjust: 100%;
+    /* 2 */
+}
+
+body {
+    margin: 0;
+}
+
+hr {
+    box-sizing: content-box;
+    /* 1 */
+    height: 0;
+    /* 1 */
+    overflow: visible;
+    /* 2 */
+}
+
+pre {
+    font-family: monospace, monospace;
+    /* 1 */
+    font-size: 1em;
+    /* 2 */
+}
+
+a {
+    background-color: transparent;
+}
+
+abbr[title] {
+    border-bottom: none;
+    /* 1 */
+    text-decoration: underline;
+    /* 2 */
+    text-decoration: underline dotted;
+    /* 2 */
+}
+
+b,
+strong {
+    font-weight: bolder;
+}
+
+code,
+kbd,
+samp {
+    font-family: monospace, monospace;
+    /* 1 */
+    font-size: 1rem;
+    /* 2 */
+}
+
+small {
+    font-size: 80%;
+}
+
+sub,
+sup {
+    position: relative;
+    vertical-align: baseline;
+    font-size: 75%;
+    line-height: 0;
+}
+
+sub {
+    bottom: -0.25em;
+}
+
+sup {
+    top: -0.5em;
+}
+
+img {
+    border-style: none;
+}
+
+input,
+optgroup,
+select,
+textarea {
+    /* 1 */
+    margin: 0;
+    font-family: inherit;
+    /* 1 */
+    font-size: 100%;
+    /* 1 */
+    line-height: 1.15;
+    /* 2 */
+}
+
+input {
+    /* 1 */
+    overflow: visible;
+}
+
+select {
+    /* 1 */
+    text-transform: none;
+}
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+    -webkit-appearance: button;
+}
+
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+    padding: 0;
+    border-style: none;
+}
+
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+    outline: 1px dotted ButtonText;
+}
+
+legend {
+    box-sizing: border-box;
+    /* 2 */
+    max-width: 100%;
+    /* 1 */
+    padding: 0;
+    /* 1 */
+    color: inherit;
+    /* 3 */
+    white-space: normal;
+    /* 1 */
+}
+
+progress {
+    vertical-align: baseline;
+}
+
+textarea {
+    overflow: auto;
+}
+
+[type="checkbox"],
+[type="radio"] {
+    box-sizing: border-box;
+    /* 1 */
+    padding: 0;
+    /* 2 */
+}
+
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+    height: auto;
+}
+
+[type="search"] {
+    /* 1 */
+    outline-offset: -2px;
+
+    -webkit-appearance: textfield;
+    /* 2 */
+}
+
+[type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none;
+}
+
+::-webkit-file-upload-button {
+    /* 1 */
+    font: inherit;
+
+    -webkit-appearance: button;
+    /* 2 */
+}
+
+details {
+    display: block;
+}
+
+summary {
+    display: list-item;
+}
+
+template {
+    display: none;
+}
+
+[hidden] {
+    display: none;
+}
+
+/* --------------- My CSS --------------- */
+
+html {
+    color: #eceff1;
+    font-family: "Lato", sans-serif;
+    font-size: 62.5%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #6b8190;
+}
+
+header,
+main,
+footer {
+    display: flex;
+    width: 100%;
+    max-width: 1030px;
+}
+
+/* Header Styles */
+
+#header {
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    padding-bottom: 5vw;
+    background-color: #364148;
+}
+
+div {
+    display: flex;
+}
+
+.brand {
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+#header-img {
+    margin: 0 1rem;
+    font-size: 3rem;
+}
+
+a {
+    color: #eceff1;
+    text-decoration: none;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+nav {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+
+nav ul {
+    padding: 0;
+    list-style-type: none;
+}
+
+#nav-flex {
+    display: flex;
+    flex-direction: row;
+}
+
+.navbox {
+    margin: 0 2rem;
+    font-size: 2rem;
+}
+
+/* Main Styles */
+
+main,
+form,
+#features-wrapper,
+#demo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#features-wrapper {
+    width: 70%;
+}
+
+main {
+    margin: 55vw auto 10vw auto;
+}
+
+form,
+.pricing-boats {
+    width: 80%;
+    margin-bottom: 7vw;
+    padding: 3vw;
+    border-width: 1px;
+    color: #1b2024;
+    background-color: #b5c0c8;
+    border-radius: 6px;
+}
+
+form {
+    font-size: 1.8rem;
+}
+
+label {
+    margin-bottom: 3vw;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.email-wrapper {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    width: 100%;
+}
+
+#email {
+    width: 70%;
+    font-size: 1rem;
+}
+
+.btn-primary {
+    padding: 1vw;
+    font-size: 1.4rem;
+    border-radius: 6px;
+}
+
+section {
+    position: relative;
+    width: 80%;
+    margin: 10vw 0;
+}
+
+section span {
+    position: absolute;
+    top: -40vw;
+}
+/* this lets us see the content that would be hidden by the nav bar*/
+
+.features {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.feature-icon {
+    margin-right: 1rem;
+}
+
+.demo-container {
+    position: relative;
+    overflow: hidden;
+    padding-top: 56.25%;
+}
+/* Using padding-top of 56.26% will keep the ratio to 56.26% (height 9 ÷ width 16), which is the default ratio for YouTube videos. */
+
+#video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+#pricing {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    width: 80%;
+}
+
+.pricing-boats {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    margin: 10vw 0;
+    color: #eceff1;
+}
+
+.boat-size {
+    margin: 0;
+    padding: 0.5em;
+    font-size: 2rem;
+    text-align: center;
+    background-color: #364148;
+    border-radius: 6px;
+}
+
+.boat-describe {
+    align-self: center;
+    margin: 8vw;
+    color: #1b2024;
+    font-size: 1.5rem;
+    line-height: 1.5;
+}
+
+.customize-btn {
+    margin: 1em;
+}
+
+footer {
+    margin: 7vw auto 5vw auto;
+}
+
+@media all and (min-width: 760px) {
+    #header {
+        flex-flow: row nowrap;
+        padding-bottom: 0;
+    }
+
+    #header-img {
+        margin: 0 2.5rem;
+        font-size: 4rem;
+    }
+
+    h1 {
+        font-size: 4rem;
+    }
+
+    .navbox {
+        font-size: 2.5rem;
+    }
+
+    main {
+        margin: 15vw auto 10vw auto;
+    }
+
+    form {
+        width: auto;
+        margin-bottom: 0;
+    }
+
+    label {
+        margin-bottom: 2vw;
+        font-size: 2rem;
+    }
+
+    #email {
+        font-size: 1.5rem;
+    }
+
+    .btn-primary {
+        font-size: 2rem;
+    }
+
+    section {
+        margin: 7vw 0 0 0;
+    }
+
+    section span {
+        top: -10vw;
+    }
+
+    .features {
+        font-size: 2rem;
+    }
+
+    #pricing {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+    }
+
+    .pricing-boats {
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+        min-height: 20vw;
+        margin: 0 1vw;
+        padding: 1vw;
+    }
+
+    .boat-size {
+        margin: 1em 0;
+    }
+
+    .boat-describe {
+        align-self: center;
+        margin: 0;
+    }
+}

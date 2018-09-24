@@ -1,0 +1,267 @@
+html,
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    font-size: 62.5%;
+    background-color: #212121;
+}
+
+header,
+main,
+.inner {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 1030px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 100;
+}
+
+header {
+    position: fixed;
+    z-index: 99;
+    align-items: center;
+    margin: 0 auto;
+    background-color: #212121;
+}
+
+main {
+    justify-content: center;
+    align-items: flex-start;
+    margin: 100px auto;
+}
+
+h1 {
+    font-family: "Rock Salt", cursive;
+    font-size: 5.8rem;
+    font-weight: 500;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    z-index: 1;
+    color: rgba(255, 255, 255, 1);
+    font-size: 2rem;
+    font-weight: 100;
+}
+
+h1,
+h2 {
+    color: #f5f5f5;
+}
+
+h1,
+h2,
+h3 {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+p {
+    margin: 0 2vw;
+}
+
+.container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: space-around;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.iconsize:hover {
+    opacity: 0.5;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.navlink:hover,
+.projectlink:hover {
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+
+@media all and (min-width: 37em) {
+    .container {
+        align-content: center;
+    }
+}
+
+/* -------------------- Header Styles -------------------- */
+
+nav,
+#brand,
+.navbox {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+nav {
+    justify-content: space-around;
+    width: 40%;
+}
+
+.navbox {
+    position: relative;
+    justify-content: center;
+    padding: 5px 10px;
+    border-radius: 3px;
+}
+
+.navlink {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 3px;
+    opacity: 0;
+}
+
+
+/* -- Welcome Section Styles --*/
+#welcome-section {
+    height: 100vh;
+    font-size: 3rem;
+}
+
+/* -------------------- Work Styles -------------------- */
+
+#work {
+    padding-top: 25vh;
+}
+
+.projectbox {
+    position: relative;
+    align-items: center;
+    width: 300px;
+    height: 190px;
+    margin: 1vw;
+    padding: 1px;
+    background-color: #414548;
+    border-radius: 3px;
+}
+
+.projectlink {
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    background: rgba(199, 199, 199, 0.2);
+    border-radius: 3px;
+    opacity: 0;
+}
+
+.thumbnail {
+    position: absolute;
+    align-items: center;
+    width: 300px;
+    height: 190px;
+    text-align: center;
+    background: no-repeat center center;
+    background-size: cover;
+    border-radius: 3px;
+    opacity: 0.75;
+    filter: blur(1px);
+
+    -webkit-filter: blur(1px);
+    -moz-filter: blur(1px);
+    -o-filter: blur(1px);
+    -ms-filter: blur(1px);
+}
+
+.projectbox,
+.thumbnail {
+    display: flex;
+    justify-content: center;
+}
+
+@media all and (min-width: 37em) {
+    #work {
+        padding-top: 5vh;
+    }
+}
+
+@media all and (min-width: 46em) {
+    #work {
+        padding-top: 0;
+    }
+}
+
+/* -------------------- About Styles -------------------- */
+
+#about,
+#aboutbox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#about {
+    padding-top: 25vh;
+}
+
+.profilepic {
+    height: auto;
+    max-width: 50%;
+    margin-bottom: 3rem;
+}
+
+.aboutme {
+    max-width: 70%;
+    padding: 1rem;
+    color: #f5f5f5;
+    font-size: 1.6rem;
+    line-height: 1.35;
+    letter-spacing: 0.3px;
+    background: rgba(214, 214, 214, 0.2);
+    border-radius: 3px;
+}
+
+@media all and (min-width: 37em) {
+    #about {
+        padding-top: 10vh;
+    }
+
+    .profilepic {
+        max-width: 40%;
+    }
+}
+
+@media all and (min-width: 46em) {
+    .profilepic {
+        margin-bottom: 4rem;
+    }
+}
+
+/* -------------------- Contact Styles -------------------- */
+
+.icon {
+    display: flex;
+    margin: 2vw;
+    color: #dcdcdc;
+}
+
+.iconsize {
+    font-size: 0.7rem;
+}
+
+.iconrow {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 645px;
+}

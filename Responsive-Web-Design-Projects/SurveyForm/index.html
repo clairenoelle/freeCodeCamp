@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300|Libre+Franklin:300" rel="stylesheet">
+    <title>Restaurant Survey</title>
+</head>
+<body>
+    <header></header>
+    <main>
+        <div class="inner">
+            <div class="contentbox">
+                <div class="surveywrapper">
+                    <div class="intro">
+                        <h1 id="title">Survey Form</h1>
+                        <p id="description">
+                            Tell us what you want to see!
+                        </p>
+                    </div>
+                    <form action="#" id="survey-form">
+                        <div class="qa">
+                            <label class="q" for="name-label" id="name-label">* Name: </label>
+                            <input type="text" placeholder=" What's your name?" class="a" id="name" required>
+                        </div>
+                        <div class="qa">
+                            <label class="q" for="email-label" id="email-label">* Email: </label>
+                            <input type="email" placeholder=" What's your email?" class="a" id="email" required>
+                        </div>
+                        <div class="qa">
+                            <label class="q" for="number-label" id="number-label">* Age: </label>
+                            <input type="number" min="13" max="120" placeholder=" How old are you?" class="a" id="number" required>
+                        </div>
+                        <div class="qa">
+                            <label class="q" for="">Which option best describes your current role?</label>
+                            <select class="a" id="dropdown" name="employopt">
+                                <option value="empft">Employed Full-Time</option>
+                                <option value="emppt">Employed Part-Time</option>
+                                <option value="hm">Home-Maker</option>
+                                <option value="stud">Student</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="qa">
+                            <legend class="q">How often do you come here?</legend>
+                            <fieldset class="radiowrapper">
+                                <div class="radio">
+                                    <input type="radio" name="frequency" value="1xmonth" id="1xmonth">
+                                    <label for="1xmonth">Once a month or less</label>
+                                </div>
+                                <div class="radio">
+                                    <input type="radio" name="frequency" value="2-4m" id="2-4m">
+                                    <label for="2-4m">2-4x/month</label>
+                                </div>
+                                <div class="radio">
+                                    <input type="radio" name="frequency" value="2-4w" id="2-4w">
+                                    <label for="2-4w">2-4x/week</label>
+                                </div>
+                                <div class="radio">
+                                    <input type="radio" name="frequency" value="2-4w+" id="2-4w+">
+                                    <label for="2-4w+">+ 2-4x/week</label>
+                                </div>
+                            </fieldset>
+                        </div>
+                        <div class="qa">
+                            <label class="q">What do you like best?</label>
+                            <select class="a" name="likebest">
+                                <option value="foodq">Food Quality</option>
+                                <option value="foodv">Food Value</option>
+                                <option value="service">Service</option>
+                                <option value="events">Events</option>
+                                <option value="music">Music</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="qa">
+                            <legend class="q">What should we improve? (Check all that apply)</legend>
+                            <fieldset class="cbwrapper">
+                                <div class="cb">
+                                    <input type="checkbox" name="improve" value="foodq" id="foodq">
+                                    <label for="foodq">Food Quality</label>
+                                </div>
+                                <div class="cb">
+                                    <input type="checkbox" name="improve" value="foodv" id="foodv">
+                                    <label for="foodv">Food Value</label>
+                                </div>
+                                <div class="cb">
+                                    <input type="checkbox" name="improve" value="service" id="service">
+                                    <label for="service">Service</label>
+                                </div>
+                                <div class="cb">
+                                    <input type="checkbox" name="improve" value="events" id="events">
+                                    <label for="events">Events</label>
+                                </div>
+                                <div class="cb">
+                                    <input type="checkbox" name="improve" value="music" id="music">
+                                    <label for="music">Music</label>
+                                </div>
+                                <div class="cb">
+                                    <input type="checkbox" name="improve" value="other" id="other">
+                                    <label for="other">Other (please describe below!)</label>
+                                </div>
+                            </fieldset>
+                        </div>
+                        <div class="qa">
+                            <label class="q">Any comments or suggestions?</label>
+                            <textarea rows="3" cols="20" class="a" placeholder="What would you like to see?" wrap="hard"></textarea>
+                        </div>
+                        <button type="submit" form="survey-form" value="Submit" class="btn-primary" id="submit">
+                            Submit
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="assets/js/scripts.js"></script>
+</body>
+<footer></footer>
+</html>

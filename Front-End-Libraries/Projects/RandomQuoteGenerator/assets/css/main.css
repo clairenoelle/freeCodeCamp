@@ -1,0 +1,212 @@
+html, body {
+    background-color: #212121;
+    font-size: 62.5%;
+}
+
+header {
+    margin: 0 auto 10vw auto;
+    max-width: 1030px;
+    width: 100%;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10vw auto;
+    max-width: 1030px;
+    width: 100%;
+    height: auto;
+}
+
+.header {
+    width: 100%;
+    height: 2vw;
+}
+
+.inner {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+}
+
+.contentbox {
+    display: flex;
+    flex-flow: column nowrap;
+    height: 50vh;
+    width: 80vw;
+
+    background-color: white;
+    border-radius: 6px;
+
+    justify-content: space-around;
+}
+
+@media all and (max-width: 360px) {
+    .contentbox {
+        height: 60vh;
+    }
+}
+
+/*-------------- Quote Styles --------------*/
+.quotebox {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    font-family: 'Alegreya Sans';
+}
+
+.quotewrapper {
+    display: flex;
+    justify-content: center;
+    align-self: flex-end;
+    width: 100%;
+}
+
+#quote {
+    margin: 3vw 4vw 0 4vw;
+    color: #EA4335;
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+
+#author {
+    margin: 4vw;
+    align-self: center;
+    color: #EA4335;
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+/*-------------- Footer Styles --------------*/
+.bottom {
+    display: flex;
+    width: 100%;
+}
+
+.footerflexwrapper {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    margin: 0 4vw 2vw 4vw;
+    width: 100%;
+}
+.media {
+    display: flex;
+}
+
+.mediaicon {
+    align-self: center;
+    cursor: pointer;
+    font-size: .6rem;
+    border-color: transparent;
+    border-width: 0px;
+    background-color: #FFFFFF;
+    color: #EA4335;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.mediaicon:hover {
+    color: #D32F2F;
+}
+
+@media all and (min-width: 46em) {
+    #quote {
+        font-size: 2rem;
+    }
+
+    #author {
+        font-size: 2.3rem;
+    }
+
+    .media {
+        justify-content: space-around;
+    }
+
+    .mediaicon {
+        font-size: .7rem;
+    }
+}
+
+/*-------------- Button Styles --------------*/
+.newquote {
+    align-self: center;
+}
+
+.btn-primary {
+    display: inline-block;
+    font-weight: 200;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    user-select: none;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-family: 'Alegreya Sans';
+    font-size: 2rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    color: #EA4335;
+    background-color: #FFFFFF;
+    border-color: #EA4335;
+}
+
+.btn-primary:hover {
+    color: #FFFFFF;
+    background-color: #D32F2F;
+    border-color: #D32F2F;
+}
+
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary.active,
+.open .dropdown-toggle.btn-primary {
+  color: #EA4335;
+  background-color: #FFFFFF;
+  border-color: #EA4335;
+}
+
+.btn-primary:active,
+.btn-primary.active,
+.open .dropdown-toggle.btn-primary {
+  background-image: none;
+}
+
+.btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show>.btn-primary.dropdown-toggle {
+    color: #FFFFFF;
+    background-color: #EA4335;
+    border-color: #EA4335;
+}
+
+.btn-primary.disabled,
+.btn-primary[disabled],
+fieldset[disabled] .btn-primary,
+.btn-primary.disabled:hover,
+.btn-primary[disabled]:hover,
+fieldset[disabled] .btn-primary:hover,
+.btn-primary.disabled:focus,
+.btn-primary[disabled]:focus,
+fieldset[disabled] .btn-primary:focus,
+.btn-primary.disabled:active,
+.btn-primary[disabled]:active,
+fieldset[disabled] .btn-primary:active,
+.btn-primary.disabled.active,
+.btn-primary[disabled].active,
+fieldset[disabled] .btn-primary.active {
+  background-color: #FFFFFF;
+  border-color: #EA4335;
+}
+
+.btn-primary .badge {
+  color: #FFFFFF;
+  background-color: #EA4335;
+}
+
+
+/* blue: #4285F4
+green: #34A853
+yellow: #FBBC05
+red: #EA4335 */
