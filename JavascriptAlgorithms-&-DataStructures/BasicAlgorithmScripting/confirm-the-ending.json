@@ -1,0 +1,1 @@
+{"index.js":"function confirmEnding(str, target) {\n  let search = new RegExp(target + \"$\");\n  return search.test(str);\n}\n\nconfirmEnding(\"Bastian\", \"n\");"}

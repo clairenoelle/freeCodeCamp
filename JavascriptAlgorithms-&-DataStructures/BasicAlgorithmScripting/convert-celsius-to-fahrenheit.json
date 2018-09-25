@@ -1,0 +1,1 @@
+{"index.js":"function convertToF(celsius) {\n  return 32 + celsius * 9/5;\n}\n\nconvertToF(30);"}
