@@ -1,0 +1,1 @@
+{"index.js":"function bouncer(arr) {\n  return arr.filter(Boolean);\n}\n\nbouncer([7, \"ate\", \"\", false, 9]);"}

@@ -1,0 +1,1 @@
+{"index.js":"function mutation(arr) {\n  return arr[1].toLowerCase()\n    .split('')\n    .every(function(letter) {\n      return arr[0].toLowerCase()\n        .indexOf(letter) != -1;\n    });\n}\n\nmutation([\"hello\", \"HEy\"]);"}
