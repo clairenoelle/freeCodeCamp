@@ -1,0 +1,1 @@
+{"index.js":"function chunkArrayInGroups(arr, size) {\n  let answer = [];\n\n  while(arr.length) {\n    answer.push(arr.splice(0, size));\n  }\n  return answer;\n}\n\nchunkArrayInGroups([\"a\", \"b\", \"c\", \"d\"], 2);"}
