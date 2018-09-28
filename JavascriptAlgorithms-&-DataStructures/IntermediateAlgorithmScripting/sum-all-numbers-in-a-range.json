@@ -1,0 +1,1 @@
+{"index.js":"function sumAll(arr) {\n  let ordered = arr.sort((a, b) => {return a - b});\n  let total = 0;\n\nfor (let i = ordered[0]; i <= ordered[1]; i++) {\n  total += i;\n  }\nreturn total;\n}\n\n\n\n  console.log(sumAll([1, 4]));"}
