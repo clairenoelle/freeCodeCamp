@@ -1,0 +1,1 @@
+{"index.js":"var myGlobal = 10;\n\n\nfunction fun1() {\n  oopsGlobal = 5;\n  \n}\n\n// Only change code above this line\nfunction fun2() {\n  var output = \"\";\n  if (typeof myGlobal != \"undefined\") {\n    output += \"myGlobal: \" + myGlobal;\n  }\n  if (typeof oopsGlobal != \"undefined\") {\n    output += \" oopsGlobal: \" + oopsGlobal;\n  }\n  console.log(output);\n}"}
