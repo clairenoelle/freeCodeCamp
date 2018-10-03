@@ -1,0 +1,1 @@
+{"index.js":"let quoteSample = \"3 blind mice.\";\nlet myRegex = /[^0-9aeiou]/gi; // Change this line\nlet result = quoteSample.match(myRegex); // Change this line"}
