@@ -1,0 +1,1 @@
+{"index.js":"function translatePigLatin(str) {\n  let vowel = /[aeiou]/gi;\n\n  if (str.match(vowel) === null) {\n    return str + \"ay\";\n  } else if (str[0].match(vowel)) {\n    return str + \"way\";\n  } else {\n    let consonants = /([^aeiou]+)(\\w+)/;\n    return str.replace(consonants, \"$2$1ay\");\n  }\n}\n\nconsole.log(translatePigLatin(\"consonant\"));"}

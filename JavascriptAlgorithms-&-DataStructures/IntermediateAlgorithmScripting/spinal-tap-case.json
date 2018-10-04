@@ -1,1 +1,1 @@
-{"index.js":"function spinalCase(str) {\n  let regEx = /\\s+|_+|(?=[A-Z])/g;\n  return str.split(regEx).join(\"-\").toLowerCase();\n}\n\nconsole.log(spinalCase('This Is Spinal Tap'));"}
+{"index.js":"function spinalCase(str) {\n  let regex = /\\s|\\_|(?=[A-Z])/g;\n  return str.split(regex).join(\"-\").toLowerCase();\n}\n\nconsole.log(spinalCase('This Is Spinal Tap'));"}
