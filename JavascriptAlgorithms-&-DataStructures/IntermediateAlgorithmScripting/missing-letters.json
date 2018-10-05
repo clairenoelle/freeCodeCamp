@@ -1,0 +1,1 @@
+{"index.js":"function fearNotLetter(str) {\n\n  let letters = str.split(\"\").map((char) => char.charCodeAt());\n\n  for (let i = 0; i < letters.length - 1; i++) {\n    if (letters[i + 1] !== letters[i] + 1) {\n      return String.fromCharCode(letters[i] + 1);\n    }\n  }\n}\n\nconsole.log(fearNotLetter(\"abce\"));"}
