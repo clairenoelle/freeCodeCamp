@@ -1,0 +1,1 @@
+{"index.js":"function uniteUnique(...arr) {\n  let nums = [].concat(...arr);\n  return nums.filter((num, pos) => nums.indexOf(num) === pos);\n\n}\n\nconsole.log(uniteUnique([1, 3, 2], [5, 2, 1, 4], [2, 1]));"}

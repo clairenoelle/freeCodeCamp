@@ -1,0 +1,1 @@
+{"index.js":"function convertHTML(str) {\n  str = str.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/\"/g,'&quot;').replace(/'/g,\"&apos;\");\nreturn str;\n}\n\nconsole.log(convertHTML(\"Dolce & Gabbana\"));"}
