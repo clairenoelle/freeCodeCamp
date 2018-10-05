@@ -1,0 +1,1 @@
+{"index.js":"const createPerson = (name, age, gender) => ({name, age, gender});\n  \"use strict\";\nconsole.log(createPerson(\"Zodiac Hasbro\", 56, \"male\")); // returns a proper object"}
