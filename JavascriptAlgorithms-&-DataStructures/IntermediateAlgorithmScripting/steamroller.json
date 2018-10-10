@@ -1,0 +1,1 @@
+{"index.js":"function steamrollArray(arr) {\n  let i = 0;\n\n  while(i < arr.length) {\n    arr = arr.reduce(function(a, b) {\n      return a.concat(b);\n    }, []);\n    i++;\n  }\n\n  return arr;\n}\n\nsteamrollArray([1, [2], [3, [[4]]]]);"}
