@@ -1,0 +1,1 @@
+{"index.js":"function palindrome(str) {\nlet letters = str.toLowerCase().replace(/[^a-z0-9]/g, \"\");\nlet reverse = letters.split(\"\").reverse().join(\"\");\n\n  return letters.localeCompare(reverse) == 0 ? true : false;\n}\n\n\n\nconsole.log(palindrome(\"nope\"));"}
