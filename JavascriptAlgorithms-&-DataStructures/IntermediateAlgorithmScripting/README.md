@@ -1,8 +1,30 @@
-# Sum All Numbers in a Range
+# Arguments Optional
 
-We'll pass you an array of two numbers. Return the sum of those two numbers plus the sum of all the numbers between them.
+Create a function that sums two arguments together. If only one argument is provided, then return a function that expects one argument and returns the sum.
 
-The lowest number will not always come first.
+For example, addTogether(2, 3) should return 5, and addTogether(2) should return a function.
+
+Calling this returned function with a single argument will then return the sum:
+
+var sumTwoAnd = addTogether(2);
+
+sumTwoAnd(3) returns 5.
+
+If either argument isn't a valid number, return undefined.
+
+
+
+# Binary Agents
+
+Return an English translated sentence of the passed binary string.
+
+The binary string will be space separated.
+
+
+
+# Convert HTML Entities
+
+Convert the characters &, <, >, " (double quote), and ' (apostrophe), in a string to their corresponding HTML entities.
 
 
 
@@ -15,26 +37,71 @@ You can return the array with its elements in any order.
 
 
 
-# Seek and Destroy
+# DNA Pairing
 
-You will be provided with an initial array (the first argument in the destroyer function), followed by one or more arguments. Remove all elements from the initial array that are of the same value as these arguments.
+The DNA strand is missing the pairing element. Take each character, get its pair, and return the results as a 2d array.
 
-Note
-You have to use the arguments object.
+Base pairs are a pair of AT and CG. Match the missing element to the provided character.
 
+Return the provided character as the first element in each array.
 
+For example, for the input GCG, return [["G", "C"], ["C","G"],["G", "C"]]
 
-# Wherefore art thou
-
-Make a function that looks through an array of objects (first argument) and returns an array of all objects that have matching name and value pairs (second argument). Each name and value pair of the source object has to be present in the object from the collection if it is to be included in the returned array.
-
-For example, if the first argument is [{ first: "Romeo", last: "Montague" }, { first: "Mercutio", last: null }, { first: "Tybalt", last: "Capulet" }], and the second argument is { last: "Capulet" }, then you must return the third object from the array (the first argument), because it contains the name and its value, that was passed on as the second argument.
+The character and its pair are paired up in an array, and all the arrays are grouped into one encapsulating array.
 
 
 
-# Spinal Tap Case
+# Drop it
 
-Convert a string to spinal case. Spinal case is all-lowercase-words-joined-by-dashes.
+Given the array arr, iterate through and remove each element starting from the first element (the 0 index) until the function func returns true when the iterated element is passed through it.
+
+Then return the rest of the array once the condition is satisfied, otherwise, arr should be returned as an empty array.
+
+
+
+# Everything Be True
+
+Check if the predicate (second argument) is truthy on all elements of a collection (first argument).
+
+In other words, you are given an array collection of objects. The predicate pre will be an object property and you need to return true if its value is truthy. Otherwise, return false.
+
+In JavaScript, truthy values are values that translate to true when evaluated in a Boolean context.
+
+Remember, you can access object properties through either dot notation or [] notation.
+
+
+# Make a Person
+
+Fill in the object constructor with the following methods below:
+
+getFirstName() getLastName() getFullName() setFirstName(first) setLastName(last) setFullName(firstAndLast)
+Run the tests to see the expected output for each method.
+
+The methods that take an argument must accept only one argument and it has to be a string.
+
+These methods must be the only available means of interacting with the object.
+
+
+
+# Map the Debris
+
+Return a new array that transforms the elements' average altitude into their orbital periods (in seconds).
+
+The array will contain objects in the format {name: 'name', avgAlt: avgAlt}.
+
+You can read about orbital periods on Wikipedia.
+
+The values should be rounded to the nearest whole number. The body being orbited is Earth.
+
+The radius of the earth is 6367.4447 kilometers, and the GM value of earth is 398600.4418 km3s-2.
+
+
+
+# Missing letters
+
+Find the missing letter in the passed letter range and return it.
+
+If all letters are present in the range, return undefined.
 
 
 
@@ -65,25 +132,23 @@ Preserve the case of the first character in the original word when you are repla
 
 
 
-# DNA Pairing
+# Seek and Destroy
 
-The DNA strand is missing the pairing element. Take each character, get its pair, and return the results as a 2d array.
+You will be provided with an initial array (the first argument in the destroyer function), followed by one or more arguments. Remove all elements from the initial array that are of the same value as these arguments.
 
-Base pairs are a pair of AT and CG. Match the missing element to the provided character.
-
-Return the provided character as the first element in each array.
-
-For example, for the input GCG, return [["G", "C"], ["C","G"],["G", "C"]]
-
-The character and its pair are paired up in an array, and all the arrays are grouped into one encapsulating array.
+Note
+You have to use the arguments object.
 
 
 
-# Missing letters
+# Smallest Common Multiple
 
-Find the missing letter in the passed letter range and return it.
+Find the smallest common multiple of the provided parameters that can be evenly divided by both, as well as by all sequential numbers in the range between these parameters.
 
-If all letters are present in the range, return undefined.
+The range will be an array of two numbers that will not necessarily be in numerical order.
+
+For example, if given 1 and 3, find the smallest common multiple of both 1 and 3 that is also evenly divisible by all numbers between 1 and 3. The answer here would be 6.
+(I did not understand this at all. This area of math is very difficult for me, and I understand how to code it even less.)
 
 
 
@@ -99,9 +164,23 @@ Check the assertion tests for examples.
 
 
 
-# Scripting: Convert HTML Entities
+# Spinal Tap Case
 
-Convert the characters &, <, >, " (double quote), and ' (apostrophe), in a string to their corresponding HTML entities.
+Convert a string to spinal case. Spinal case is all-lowercase-words-joined-by-dashes.
+
+
+
+# Steamroller
+
+Flatten a nested array. You must account for varying levels of nesting.
+
+
+
+# Sum All Numbers in a Range
+
+We'll pass you an array of two numbers. Return the sum of those two numbers plus the sum of all the numbers between them.
+
+The lowest number will not always come first.
 
 
 
@@ -126,48 +205,8 @@ The provided number may not be a prime.
 
 
 
-# Smallest Common Multiple
+# Wherefore art thou
 
-Find the smallest common multiple of the provided parameters that can be evenly divided by both, as well as by all sequential numbers in the range between these parameters.
+Make a function that looks through an array of objects (first argument) and returns an array of all objects that have matching name and value pairs (second argument). Each name and value pair of the source object has to be present in the object from the collection if it is to be included in the returned array.
 
-The range will be an array of two numbers that will not necessarily be in numerical order.
-
-For example, if given 1 and 3, find the smallest common multiple of both 1 and 3 that is also evenly divisible by all numbers between 1 and 3. The answer here would be 6.
-(I did not understand this at all. This area of math is very difficult for me, and I understand how to code it even less.)
-
-
-
-# Drop it
-
-Given the array arr, iterate through and remove each element starting from the first element (the 0 index) until the function func returns true when the iterated element is passed through it.
-
-Then return the rest of the array once the condition is satisfied, otherwise, arr should be returned as an empty array.
-
-
-
-# Steamroller
-
-Flatten a nested array. You must account for varying levels of nesting.
-
-
-
-# Binary Agents
-
-Return an English translated sentence of the passed binary string.
-
-The binary string will be space separated.
-
-
-
-# Everything Be True
-
-Check if the predicate (second argument) is truthy on all elements of a collection (first argument).
-
-In other words, you are given an array collection of objects. The predicate pre will be an object property and you need to return true if its value is truthy. Otherwise, return false.
-
-In JavaScript, truthy values are values that translate to true when evaluated in a Boolean context.
-
-Remember, you can access object properties through either dot notation or [] notation.
-
-
-# 
+For example, if the first argument is [{ first: "Romeo", last: "Montague" }, { first: "Mercutio", last: null }, { first: "Tybalt", last: "Capulet" }], and the second argument is { last: "Capulet" }, then you must return the third object from the array (the first argument), because it contains the name and its value, that was passed on as the second argument.

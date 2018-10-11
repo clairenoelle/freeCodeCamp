@@ -1,0 +1,1 @@
+{"index.js":"function addTogether() {\n  let args = Array.from(arguments);\n  return args.some((num) => typeof num !== \"number\") ? \n    undefined :\n    args.length > 1 ?\n      args.reduce((a, b) => a += b, 0) :\n      (num) => typeof num === \"number\" ? \n        num + args[0] :\n        undefined;\n}\n\nconsole.log(addTogether(2, 3));"}

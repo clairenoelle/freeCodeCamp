@@ -1,0 +1,1 @@
+{"index.js":"function truthCheck(collection, pre) {\n  return collection.every((obj) => obj[pre]);\n    \n  \n}\n\nconsole.log(truthCheck([{\"user\": \"Tinky-Winky\", \"sex\": \"male\"}, {\"user\": \"Dipsy\", \"sex\": \"male\"}, {\"user\": \"Laa-Laa\", \"sex\": \"female\"}, {\"user\": \"Po\", \"sex\": \"female\"}], \"sex\"));"}
