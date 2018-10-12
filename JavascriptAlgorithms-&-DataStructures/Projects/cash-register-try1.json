@@ -1,0 +1,74 @@
+/*I tried to use the same logic as the Roman Numeral Converter, and it works for ISF amounts and change amounts only requiring one denomination, but I couldn't figure out how to get it to properly handle multiple denominations.*/
+
+
+
+
+
+
+function checkCashRegister(price, cash, cid) {
+    let onhand = 0; //will equal the total amount in the drawer
+    let drawer = []; //holds the value of each denomination in the drawer
+    let denomSupply = []; //holds the number of bills/coins for each denomination
+    const DENOM_VAL = [.01, .05, .1, .25, 1, 5, 10, 20, 100];
+    const CURRENCY = ['PENNY', 'NICKEL', 'DIME', 'QUARTER', 'ONE', 'FIVE', 'TEN', 'TWENTY', 'ONE HUNDRED'];
+    let change = cash - price;
+    let give = []; //equals change to give back to customer
+
+    for (let i = 8; i >= 0; i--) {
+        onhand += cid[i][1];
+        drawer.push(cid[i][1]);
+        denomSupply.push(Math.round(cid[i][1] / DENOM_VAL[i]));
+    }
+
+    denomSupply.reverse();
+    drawer.reverse();
+
+    for (let j = 8; j >= 0; j--) {
+        while (DENOM_VAL[j] <= change && Number.isInteger(change / DENOM_VAL[j]) && drawer[j] >= change) {
+            denomSupply[j] -= change / DENOM_VAL[j];
+            drawer[j] = denomSupply[j] * DENOM_VAL[j];
+            give.push([CURRENCY[j], (change / DENOM_VAL[j]) * DENOM_VAL[j]]);
+            onhand = drawer.reduce((a, b) => a + b).toFixed(2);
+            change -= DENOM_VAL[j] * (change / DENOM_VAL[j]);
+
+        }
+
+    }
+
+
+    return onhand < change ? {
+            status: "INSUFFICIENT_FUNDS",
+            change: []
+        } :
+        onhand === change ? {
+            status: "CLOSED",
+            change: give
+        } : {
+            status: "OPEN",
+            change: give
+        };
+
+}
+
+// Example cash-in-drawer array:
+// [["PENNY", 1.01],
+// ["NICKEL", 2.05],
+// ["DIME", 3.1],
+// ["QUARTER", 4.25],
+// ["ONE", 90],
+// ["FIVE", 55],
+// ["TEN", 20],
+// ["TWENTY", 60],
+// ["ONE HUNDRED", 100]]
+
+console.log(checkCashRegister(19.5, 20, [
+    ["PENNY", 1.01],
+    ["NICKEL", 2.05],
+    ["DIME", 3.1],
+    ["QUARTER", 4.25],
+    ["ONE", 90],
+    ["FIVE", 55],
+    ["TEN", 20],
+    ["TWENTY", 60],
+    ["ONE HUNDRED", 100]
+]));
