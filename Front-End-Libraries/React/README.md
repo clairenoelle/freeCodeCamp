@@ -216,4 +216,10 @@ Next, add RenderInput to the render method in MyApp, then create a prop called i
 
 
 
+# Use the Lifecycle Method componentWillMount
+
+The componentWillMount() method is called before the render() method when a component is being mounted to the DOM. Log something to the console within componentWillMount() - you may want to have your browser console open to see the output.
+
+
+
 # 
