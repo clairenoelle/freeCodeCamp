@@ -1,13 +1,18 @@
 .Card {
+  margin: 10vw auto;
+  max-width: 1030px;
+  width: 60%;
+  height: 60vh;
+  background-color: #FFDA88;
+  border-radius: 6px;
+}
+
+.Inner {
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
-  margin: 10vw auto;
-  max-width: 1030px;
-  width: 100%;
-  height: 20vh;
-  background-color: white;
+  height: 100%;
 }
 
 .IconWrapper {
@@ -18,43 +23,56 @@
   width: 100%;
   height: 100%;
   justify-content: space-between;
-  padding: 3rem;
+  padding: 6em 4em;
 }
 
-#QR {
+.Icon {
+  font-size: 8rem;
+  color: #563B1C;
+  opacity: .3;
+}
+
+#QuoteRight {
   align-self: flex-end;
 }
 
-.AssetsWrapper {
-  z-index: 2;
+.CardText {
+  z-index: 1;
   position: absolute;
-  display: flex;
-  flex-flow: column nowrap;
-  align-items: center;
-  justify-content: space-between;
+  align-self: center;
+  justify-self: center;
+  padding: 6em;
   width: 100%;
   height: 100%;
-  padding: 2rem;
-}
-
-.CardText {
-  display: flex;
-  height: 80%;
-  font-size: 2vw;
+  font-size: 2.4em;
 }
 
 p {
+  display: flex;
   margin-bottom: 0;
   align-items: center;
-  text-align: center;
+  justify-content: center;
 }
 
 .Footer {
+  z-index: 2;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-around;
   align-items: center;
+  align-self: flex-end;
   width: 100%;
+  padding-bottom: 2em;
+}
+
+#Twitter {
+  color: #563B1C;
+  font-size: 2rem;
+}
+
+.btn {
+  color: #563B1C;
+  border: 1px solid #563B1C;
 }
 
 /* 
