@@ -9,6 +9,7 @@ class Card extends Component {
   constructor(props) {
     super(props);
     this.state = { quote: '' };
+    this.twitterClick = this.twitterClick.bind(this);
     this.handleClick = this.handleClick.bind(this);
   }
   
@@ -19,11 +20,14 @@ class Card extends Component {
       .then(response => this.setState({ quote: response.data }));
   }
 
+  twitterClick() {
+    let twitterLink = "http://twitter.com/intent/tweet?text=" + this.state.quote;
+    window.open(twitterLink, "_blank");
+  }
+
   handleClick() {
-    setTimeout( () => {
       axios.get('https://ron-swanson-quotes.herokuapp.com/v2/quotes')
       .then(response => this.setState({ quote: response.data }));
-    }, 2500);
   }
 
   render() {
@@ -38,8 +42,8 @@ class Card extends Component {
             { this.state.quote }
           </p>
           <footer className="Footer">
-            <FontAwesomeIcon icon={ faTwitter } id="Twitter" />
-            <button className="btn" onClick={this.handleClick}>Get More Ron</button>
+            <FontAwesomeIcon icon={ faTwitter } id="Twitter" onClick={this.twitterClick} />
+            <button className="btn" onClick={this.handleClick}>Get More Ron Swanson</button>
           </footer>
         </div>
       </div>
