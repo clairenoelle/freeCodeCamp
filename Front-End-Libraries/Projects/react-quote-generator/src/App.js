@@ -14,14 +14,13 @@ class Card extends Component {
   }
   
 
-
   componentDidMount() {
     axios.get('https://ron-swanson-quotes.herokuapp.com/v2/quotes')
       .then(response => this.setState({ quote: response.data }));
   }
 
   twitterClick() {
-    let twitterLink = "http://twitter.com/intent/tweet?text=" + this.state.quote;
+    let twitterLink = "http://twitter.com/intent/tweet?text=" + this.state.quote + "  -Ron Swanson";
     window.open(twitterLink, "_blank");
   }
 
